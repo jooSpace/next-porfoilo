@@ -8,7 +8,8 @@ export default function ProjectItem({data}) {
     const imgSrc = data.cover.file.url
     const tags = data.properties.태그.multi_select
     const startDate = data.properties.날짜.date.start
-    const endDate = data.properties.날짜.date.end
+    const endDate = data.properties.날짜.date.end 
+    const url = data.properties.URL.url
 
     return(
         <div className="project-card">
@@ -41,6 +42,9 @@ export default function ProjectItem({data}) {
                         <h3 className="px-2 py-1 mr-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30" key={tag.id}>{tag.name}</h3>
                     ))}
                 </div>
+                <a className="mt-4 text-xl" href={url}>
+                    {url ? 'URL 바로가기' : ""}
+                </a>
             </div>
 
         </div>
