@@ -2,11 +2,11 @@ import Image from "next/legacy/image";
 
 export default function ProjectItem({data}) {
 
-    const title = data.properties.이름.title[0].plain_text
+    const title = data.properties.Title.title[0].plain_text
     const youtube = data.properties.Youtube.url
-    const description = data.properties.텍스트.rich_text[0].plain_text
+    const description = data.properties.Text.rich_text[0].plain_text
     const imgSrc = data.cover.file.url
-    const tags = data.properties.태그.multi_select
+    const tags = data.properties.Tag.multi_select
     const startDate = data.properties.날짜.date.start
     const endDate = data.properties.날짜.date.end 
     const url = data.properties.URL.url

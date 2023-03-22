@@ -41,7 +41,7 @@ export async function getStaticProps() {
             sorts: [
                 {
                     "property" : "날짜",
-                    "direction" : "descending"
+                    "direction" : "ascending"
                 }
             ],
             page_size: 100
